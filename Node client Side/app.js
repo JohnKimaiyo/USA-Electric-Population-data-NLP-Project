@@ -75,6 +75,9 @@ async function main() {
     console.error(`An error occurred: ${error}`);
   }
 }
+// Serve static files from the public folder
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 // Call the main function immediately
 main();
